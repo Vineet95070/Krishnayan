@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Get Started — Krishnayan Leadership Training</title>
+    <meta name="description"
+        content="Get started with Krishnayan Leadership Training. Choose your path in IT consultancy, AI solutions, corporate training, or skill development.">
+    <link rel="icon" href="assets/img/icon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .gs-hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #0A1F44 0%, #122b5e 50%, #0e2450 100%);
+            padding-top: 94px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gs-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 30% 70%, rgba(201, 162, 39, .1), transparent 50%),
+                radial-gradient(circle at 75% 25%, rgba(201, 162, 39, .06), transparent 40%);
+        }
+
+        .gs-hero .container {
+            position: relative;
+            z-index: 2
+        }
+
+        .gs-steps {
+            counter-reset: step
+        }
+
+        .gs-step {
+            display: flex;
+            gap: 28px;
+            align-items: flex-start;
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(255, 255, 255, .08);
+            border-radius: 16px;
+            padding: 32px 36px;
+            margin-bottom: 20px;
+            transition: all .4s var(--ease);
+        }
+
+        .gs-step:hover {
+            background: rgba(255, 255, 255, .07);
+            transform: translateX(6px)
+        }
+
+        .gs-step__num {
+            counter-increment: step;
+            flex-shrink: 0;
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, var(--royal-gold), #d4af37);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--deep-blue);
+        }
+
+        .gs-step__title {
+            font-weight: 600;
+            color: var(--white);
+            font-size: 1.1rem;
+            margin-bottom: 6px
+        }
+
+        .gs-step__text {
+            font-size: .9rem;
+            color: rgba(255, 255, 255, .6);
+            line-height: 1.7
+        }
+
+        .gs-path-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px 32px;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: all .4s var(--ease);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gs-path-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--royal-gold), var(--deep-blue));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .4s var(--ease);
+        }
+
+        .gs-path-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg)
+        }
+
+        .gs-path-card:hover::before {
+            transform: scaleX(1)
+        }
+
+        .gs-path-icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 18px;
+            margin: 0 auto 22px;
+            background: linear-gradient(135deg, rgba(201, 162, 39, .12), rgba(10, 31, 68, .06));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .gs-path-title {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--deep-blue);
+            margin-bottom: 10px
+        }
+
+        .gs-path-text {
+            font-size: .9rem;
+            color: var(--mid-gray);
+            line-height: 1.7;
+            margin-bottom: 22px
+        }
+
+        .gs-form {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 48px 44px;
+            box-shadow: var(--shadow-lg);
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .gs-form .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px
+        }
+
+        @media(max-width:768px) {
+            .gs-form .form-row {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <a href="index.html" class="header__logo"><img src="assets/img/logo.png" alt="Krishnayan Logo"></a>
+            <button class="hamburger" id="hamburger"
+                aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+            <nav class="header__nav" id="nav">
+                <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+                <a href="training.html">Training</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a>
+                <a href="getstarted.html" class="header__cta active">Get Started</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ====== HERO ====== -->
+    <section class="gs-hero">
+        <div class="container">
+            <div class="grid-2" style="align-items:center;gap:60px">
+                <div class="fade-up">
+                    <span class="section-label" style="margin-bottom:20px">Your Journey Begins Here</span>
+                    <h1
+                        style="font-family:var(--font-heading);font-size:2.8rem;font-weight:700;color:var(--white);line-height:1.2;margin-bottom:18px">
+                        Get Started with <span style="color:var(--royal-gold)">Krishnayan</span></h1>
+                    <p style="color:rgba(255,255,255,.7);font-size:1.05rem;line-height:1.8;margin-bottom:36px">Whether
+                        you're looking for technology consulting, AI-powered solutions, or leadership development —
+                        we're here to guide your transformation journey.</p>
+                    <div class="gs-steps">
+                        <div class="gs-step">
+                            <div class="gs-step__num">1</div>
+                            <div>
+                                <div class="gs-step__title">Choose Your Path</div>
+                                <div class="gs-step__text">Select the service or training program that fits your needs.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gs-step">
+                            <div class="gs-step__num">2</div>
+                            <div>
+                                <div class="gs-step__title">Tell Us About Yourself</div>
+                                <div class="gs-step__text">Fill in your details so we can tailor the experience for you.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gs-step">
+                            <div class="gs-step__num">3</div>
+                            <div>
+                                <div class="gs-step__title">Get a Personalized Plan</div>
+                                <div class="gs-step__text">Our team will reach out with a customized proposal within 24
+                                    hours.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gs-form fade-up">
+                    <h3
+                        style="font-family:var(--font-heading);font-size:1.5rem;font-weight:600;color:var(--deep-blue);margin-bottom:6px;text-align:center">
+                        Start Your Journey</h3>
+                    <p style="text-align:center;color:var(--mid-gray);font-size:.9rem;margin-bottom:28px">Fill in the
+                        form and we'll get back to you within 24 hours.</p>
+                    <form id="gsForm" onsubmit="return handleGS(event)">
+                        <div class="gs-form .form-row" style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+                            <div class="form-group"><label for="fname">First Name</label><input type="text" id="fname"
+                                    placeholder="John" required></div>
+                            <div class="form-group"><label for="lname">Last Name</label><input type="text" id="lname"
+                                    placeholder="Doe" required></div>
+                        </div>
+                        <div class="form-group"><label for="email">Email Address</label><input type="email" id="email"
+                                placeholder="john@company.com" required></div>
+                        <div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone"
+                                placeholder="+91 98765 43210"></div>
+                        <div class="form-group"><label for="company">Company / Institution</label><input type="text"
+                                id="company" placeholder="Your organization name"></div>
+                        <div class="form-group">
+                            <label for="interest">I'm Interested In</label>
+                            <select id="interest"
+                                style="width:100%;padding:14px 18px;border:1.5px solid var(--light-gray);border-radius:12px;font-size:.95rem;background:var(--off-white);color:var(--dark-text);cursor:pointer;transition:border-color .3s,box-shadow .3s;appearance:auto"
+                                required>
+                                <option value="" disabled selected>Select an option...</option>
+                                <option value="it">IT Consultancy</option>
+                                <option value="ai">AI Solutions</option>
+                                <option value="corporate">Corporate Leadership Training</option>
+                                <option value="campus">College & Campus Training</option>
+                                <option value="ai-training">AI & Data Science Training</option>
+                                <option value="webdev">Web Development Training</option>
+                                <option value="internship">Internship Programs</option>
+                                <option value="custom">Custom Enterprise Solution</option>
+                            </select>
+                        </div>
+                        <div class="form-group"><label for="msg">Additional Details</label><textarea id="msg"
+                                placeholder="Tell us about your goals, team size, timeline, etc."
+                                style="min-height:100px"></textarea></div>
+                        <button type="submit" class="btn btn--primary"
+                            style="width:100%;justify-content:center;font-size:1rem;padding:16px">Get Started →</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== CHOOSE YOUR PATH ====== -->
+    <section class="section">
+        <div class="container text-center">
+            <span class="section-label fade-up">Explore Your Options</span>
+            <h2 class="section-title fade-up">Choose Your Path</h2>
+            <p class="section-subtitle fade-up">Select the area that best fits your needs and let us craft the perfect
+                solution for you.</p>
+            <div class="grid-4">
+                <div class="gs-path-card fade-up">
+                    <div class="gs-path-icon">💻</div>
+                    <h3 class="gs-path-title">IT Consultancy</h3>
+                    <p class="gs-path-text">Modernize your tech stack, optimize processes, and accelerate digital
+                        transformation.</p>
+                    <a href="services.html" class="btn btn--outline-dark btn--small">Learn More</a>
+                </div>
+                <div class="gs-path-card fade-up">
+                    <div class="gs-path-icon">🤖</div>
+                    <h3 class="gs-path-title">AI Solutions</h3>
+                    <p class="gs-path-text">Custom ML models, automation, and intelligent analytics for your business.
+                    </p>
+                    <a href="services.html" class="btn btn--outline-dark btn--small">Learn More</a>
+                </div>
+                <div class="gs-path-card fade-up">
+                    <div class="gs-path-icon">👥</div>
+                    <h3 class="gs-path-title">Corporate Training</h3>
+                    <p class="gs-path-text">Leadership development and skill programs for high-performance teams.</p>
+                    <a href="services.html" class="btn btn--outline-dark btn--small">Learn More</a>
+                </div>
+                <div class="gs-path-card fade-up">
+                    <div class="gs-path-icon">🎓</div>
+                    <h3 class="gs-path-title">Skill Programs</h3>
+                    <p class="gs-path-text">Industry-ready training in AI, Web Dev, and more for students &
+                        professionals.</p>
+                    <a href="training.html" class="btn btn--outline-dark btn--small">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== TRUST ====== -->
+    <section class="section section--blue">
+        <div class="container">
+            <div class="stats fade-up">
+                <div>
+                    <div class="stat__number">200+</div>
+                    <div class="stat__label">Clients Served</div>
+                </div>
+                <div>
+                    <div class="stat__number">50K+</div>
+                    <div class="stat__label">Professionals Trained</div>
+                </div>
+                <div>
+                    <div class="stat__number">15+</div>
+                    <div class="stat__label">Countries</div>
+                </div>
+                <div>
+                    <div class="stat__number">98%</div>
+                    <div class="stat__label">Client Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FAQ ====== -->
+    <section class="section">
+        <div class="container" style="max-width:800px">
+            <div class="text-center" style="margin-bottom:50px">
+                <span class="section-label fade-up">FAQ</span>
+                <h2 class="section-title fade-up">Frequently Asked Questions</h2>
+            </div>
+            <div class="fade-up" id="faqList">
+                <div class="faq-item" style="border-bottom:1px solid var(--light-gray);padding:20px 0">
+                    <button onclick="toggleFaq(this)"
+                        style="width:100%;background:none;border:none;display:flex;justify-content:space-between;align-items:center;cursor:pointer;padding:0;text-align:left">
+                        <span style="font-weight:600;color:var(--deep-blue);font-size:1.05rem">How quickly can I expect
+                            a response?</span>
+                        <span style="color:var(--royal-gold);font-size:1.4rem;transition:transform .3s">+</span>
+                    </button>
+                    <div style="max-height:0;overflow:hidden;transition:max-height .4s ease">
+                        <p style="padding:14px 0 0;color:var(--mid-gray);font-size:.92rem;line-height:1.7">Our team
+                            responds to all inquiries within 24 business hours. For urgent requirements, you can call us
+                            directly at +91 98765 43210.</p>
+                    </div>
+                </div>
+                <div class="faq-item" style="border-bottom:1px solid var(--light-gray);padding:20px 0">
+                    <button onclick="toggleFaq(this)"
+                        style="width:100%;background:none;border:none;display:flex;justify-content:space-between;align-items:center;cursor:pointer;padding:0;text-align:left">
+                        <span style="font-weight:600;color:var(--deep-blue);font-size:1.05rem">Do you offer customized
+                            solutions?</span>
+                        <span style="color:var(--royal-gold);font-size:1.4rem;transition:transform .3s">+</span>
+                    </button>
+                    <div style="max-height:0;overflow:hidden;transition:max-height .4s ease">
+                        <p style="padding:14px 0 0;color:var(--mid-gray);font-size:.92rem;line-height:1.7">Absolutely!
+                            Every engagement begins with understanding your unique needs. We design bespoke technology
+                            and training solutions tailored to your organization.</p>
+                    </div>
+                </div>
+                <div class="faq-item" style="border-bottom:1px solid var(--light-gray);padding:20px 0">
+                    <button onclick="toggleFaq(this)"
+                        style="width:100%;background:none;border:none;display:flex;justify-content:space-between;align-items:center;cursor:pointer;padding:0;text-align:left">
+                        <span style="font-weight:600;color:var(--deep-blue);font-size:1.05rem">What industries do you
+                            work with?</span>
+                        <span style="color:var(--royal-gold);font-size:1.4rem;transition:transform .3s">+</span>
+                    </button>
+                    <div style="max-height:0;overflow:hidden;transition:max-height .4s ease">
+                        <p style="padding:14px 0 0;color:var(--mid-gray);font-size:.92rem;line-height:1.7">We work
+                            across IT, finance, healthcare, education, manufacturing, and more. Our solutions are
+                            industry-agnostic and adaptable to any domain.</p>
+                    </div>
+                </div>
+                <div class="faq-item" style="border-bottom:1px solid var(--light-gray);padding:20px 0">
+                    <button onclick="toggleFaq(this)"
+                        style="width:100%;background:none;border:none;display:flex;justify-content:space-between;align-items:center;cursor:pointer;padding:0;text-align:left">
+                        <span style="font-weight:600;color:var(--deep-blue);font-size:1.05rem">Are your training
+                            programs available online?</span>
+                        <span style="color:var(--royal-gold);font-size:1.4rem;transition:transform .3s">+</span>
+                    </button>
+                    <div style="max-height:0;overflow:hidden;transition:max-height .4s ease">
+                        <p style="padding:14px 0 0;color:var(--mid-gray);font-size:.92rem;line-height:1.7">Yes! We offer
+                            on-site, virtual, and hybrid training formats to accommodate teams across geographies and
+                            time zones.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-banner">
+        <div class="container fade-up">
+            <h2 class="cta-banner__title">Still Have Questions?</h2>
+            <p class="cta-banner__text">Our team is always happy to help. Reach out and let's start a conversation.</p>
+            <a href="contact.html" class="btn btn--primary">Contact Us →</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <img src="assets/img/logo.png" alt="Krishnayan Logo">
+                    <p>Empowering organizations with cutting-edge technology solutions and conscious leadership
+                        development.</p>
+                    <div class="footer__social">
+                        <a href="#" aria-label="LinkedIn"><svg width="18" height="18" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg></a>
+                        <a href="#" aria-label="Twitter"><svg width="18" height="18" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M23.953 4.57a10 10 0 0 1-2.825.775 4.958 4.958 0 0 0 2.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 0 0-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 0 0-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 0 1-2.228-.616v.06a4.923 4.923 0 0 0 3.946 4.827 4.996 4.996 0 0 1-2.212.085 4.936 4.936 0 0 0 4.604 3.417 9.867 9.867 0 0 1-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0 0 7.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0 0 24 4.59z" />
+                            </svg></a>
+                        <a href="#" aria-label="Facebook"><svg width="18" height="18" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg></a>
+                        <a href="#" aria-label="Instagram"><svg width="18" height="18" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+                            </svg></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer__heading">Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="training.html">Training</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__heading">Services</h4>
+                    <ul class="footer__links">
+                        <li><a href="services.html">IT Consultancy</a></li>
+                        <li><a href="services.html">AI Solutions</a></li>
+                        <li><a href="services.html">Corporate Training</a></li>
+                        <li><a href="services.html">Campus Programs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__heading">Contact Us</h4>
+                    <ul class="footer__contact">
+                        <li><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg> info@krishnayan.com</li>
+                        <li><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg> +91 98765 43210</li>
+                        <li><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg> Pune, Maharashtra, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">&copy; 2026 Krishnayan Leadership Training. All rights reserved.</div>
+        </div>
+    </footer>
+    <script>
+        const hamburger = document.getElementById('hamburger'), nav = document.getElementById('nav');
+        hamburger.addEventListener('click', () => { hamburger.classList.toggle('open'); nav.classList.toggle('open') });
+        nav.querySelectorAll('a').forEach(l => l.addEventListener('click', () => { hamburger.classList.remove('open'); nav.classList.remove('open') }));
+        window.addEventListener('scroll', () => document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50));
+        const observer = new IntersectionObserver(e => e.forEach(el => { if (el.isIntersecting) { el.target.classList.add('visible'); observer.unobserve(el.target) } }), { threshold: .15 });
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+        function handleGS(e) { e.preventDefault(); const b = e.target.querySelector('button[type="submit"]'); b.textContent = 'Request Submitted ✓'; b.style.background = '#22c55e'; setTimeout(() => { b.textContent = 'Get Started →'; b.style.background = ''; e.target.reset() }, 3000); return false }
+        function toggleFaq(btn) { const panel = btn.nextElementSibling; const icon = btn.querySelector('span:last-child'); if (panel.style.maxHeight && panel.style.maxHeight !== '0px') { panel.style.maxHeight = '0px'; icon.textContent = '+'; icon.style.transform = 'rotate(0)'; } else { panel.style.maxHeight = panel.scrollHeight + 'px'; icon.textContent = '−'; icon.style.transform = 'rotate(180deg)'; } }
+    </script>
+</body>
+
+</html>
