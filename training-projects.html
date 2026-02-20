@@ -146,28 +146,24 @@
             position: relative;
             border-radius: 20px;
             overflow: hidden;
-            max-width: 100%;
-            box-shadow: 0 12px 48px rgba(10, 31, 68, .12);
+            box-shadow: 0 12px 48px rgba(10, 31, 68, .12)
         }
 
         .slider-track {
             display: flex;
-            transition: transform .6s cubic-bezier(.4, 0, .2, 1);
+            transition: transform .6s cubic-bezier(.4, 0, .2, 1)
         }
 
         .slider-slide {
             min-width: 100%;
-            position: relative;
-            aspect-ratio: 16 / 9;
-            overflow: hidden;
+            position: relative
         }
 
         .slider-slide img {
             width: 100%;
-            height: 100%;
+            height: 520px;
             object-fit: cover;
-            object-position: center;
-            display: block;
+            display: block
         }
 
         .slider-overlay {
@@ -176,7 +172,7 @@
             left: 0;
             right: 0;
             padding: 32px 40px;
-            background: linear-gradient(to top, rgba(10, 31, 68, .88) 0%, rgba(10, 31, 68, .35) 55%, transparent 100%);
+            background: linear-gradient(to top, rgba(10, 31, 68, .85) 0%, rgba(10, 31, 68, .3) 60%, transparent 100%);
         }
 
         .slider-overlay h3 {
@@ -184,12 +180,12 @@
             font-family: var(--font-heading);
             font-size: 1.4rem;
             font-weight: 600;
-            margin-bottom: 4px;
+            margin-bottom: 4px
         }
 
         .slider-overlay p {
             color: rgba(255, 255, 255, .7);
-            font-size: .88rem;
+            font-size: .88rem
         }
 
         .slider-btn {
@@ -202,37 +198,33 @@
             border-radius: 50%;
             border: none;
             cursor: pointer;
-            background: rgba(255, 255, 255, .18);
+            background: rgba(255, 255, 255, .15);
             backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
             color: var(--white);
             font-size: 1.3rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all .3s ease;
+            transition: all .3s;
         }
 
         .slider-btn:hover {
-            background: rgba(201, 162, 39, .55);
-            transform: translateY(-50%) scale(1.08);
+            background: rgba(201, 162, 39, .5)
         }
 
         .slider-prev {
-            left: 16px
+            left: 20px
         }
 
         .slider-next {
-            right: 16px
+            right: 20px
         }
 
         .slider-dots {
             display: flex;
             justify-content: center;
-            gap: 10px;
-            margin-top: 20px;
-            padding: 0 16px;
-            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 20px
         }
 
         .slider-dot {
@@ -242,19 +234,19 @@
             background: rgba(10, 31, 68, .15);
             border: none;
             cursor: pointer;
-            transition: all .3s ease;
+            transition: all .3s;
         }
 
         .slider-dot.active {
             background: var(--royal-gold);
-            transform: scale(1.3);
+            transform: scale(1.3)
         }
 
         /* ---- College Grid ---- */
         .collab-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 28px;
+            gap: 28px
         }
 
         .collab-card {
@@ -267,20 +259,19 @@
 
         .collab-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 12px 40px rgba(10, 31, 68, .13);
+            box-shadow: 0 12px 40px rgba(10, 31, 68, .13)
         }
 
         .collab-img {
             width: 100%;
             height: 220px;
             object-fit: cover;
-            object-position: center;
             display: block;
-            transition: transform .5s var(--ease);
+            transition: transform .5s var(--ease)
         }
 
         .collab-card:hover .collab-img {
-            transform: scale(1.05);
+            transform: scale(1.05)
         }
 
         .collab-body {
@@ -291,14 +282,14 @@
             font-weight: 700;
             color: var(--deep-blue);
             font-size: 1.08rem;
-            margin-bottom: 6px;
+            margin-bottom: 6px
         }
 
         .collab-desc {
             font-size: .85rem;
             color: var(--mid-gray);
             line-height: 1.7;
-            margin-bottom: 12px;
+            margin-bottom: 12px
         }
 
         .collab-tag {
@@ -312,90 +303,17 @@
             letter-spacing: .5px;
         }
 
-        /* ---- Tablet ---- */
-        @media(max-width:1024px) {
-            .slider-btn {
-                width: 42px;
-                height: 42px;
-                font-size: 1.15rem
-            }
-
-            .slider-overlay h3 {
-                font-size: 1.2rem
-            }
-
-            .collab-grid {
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
-            }
-        }
-
-        /* ---- Mobile ---- */
         @media(max-width:768px) {
             .tp-hero h1 {
                 font-size: 2.2rem
             }
 
-            .slider-slide {
-                aspect-ratio: 4 / 3
-            }
-
-            .slider-btn {
-                width: 36px;
-                height: 36px;
-                font-size: 1rem
-            }
-
-            .slider-prev {
-                left: 10px
-            }
-
-            .slider-next {
-                right: 10px
+            .slider-slide img {
+                height: 320px
             }
 
             .slider-overlay {
-                padding: 20px 20px
-            }
-
-            .slider-overlay h3 {
-                font-size: 1.05rem
-            }
-
-            .slider-overlay p {
-                font-size: .8rem
-            }
-
-            .slider-dots {
-                gap: 8px;
-                margin-top: 14px
-            }
-
-            .slider-dot {
-                width: 8px;
-                height: 8px
-            }
-
-            .collab-grid {
-                grid-template-columns: 1fr
-            }
-
-            .collab-img {
-                height: 200px
-            }
-        }
-
-        /* ---- Small Mobile ---- */
-        @media(max-width:480px) {
-            .slider-slide {
-                aspect-ratio: 3 / 2
-            }
-
-            .slider-overlay {
-                padding: 16px
-            }
-
-            .slider-overlay h3 {
-                font-size: .95rem
+                padding: 20px 24px
             }
         }
     </style>
@@ -411,7 +329,7 @@
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="team.html">Team</a>
-                <a href="training.html" class="active">Training</a>
+                <a href="training.html">Training</a>
                 <a href="gallery.html">Gallery</a>
                 <a href="contact.html">Contact</a>
                 <a href="getstarted.html" class="header__cta">Get Started</a>
@@ -429,6 +347,69 @@
         </div>
     </section>
 
+    <!-- ====== TRAINING PROGRAMS ====== -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center" style="margin-bottom:50px">
+                <span class="section-label fade-up">What We Offer</span>
+                <h2 class="section-title fade-up">Our Training Programs</h2>
+                <p class="section-subtitle fade-up">Industry-aligned programs designed to make students and
+                    professionals job-ready with real-world skills.</p>
+            </div>
+            <div class="prog-grid">
+                <div class="prog-card fade-up">
+                    <div class="prog-icon">🤖</div>
+                    <h3>AI & Data Science Training</h3>
+                    <p>Deep dive into machine learning, deep learning, NLP, and data engineering with hands-on projects
+                        using real-world datasets.</p>
+                    <a href="training.html" class="prog-link">View Details <svg width="14" height="14" fill="none"
+                            stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg></a>
+                </div>
+                <div class="prog-card fade-up">
+                    <div class="prog-icon">💻</div>
+                    <h3>Web Development Bootcamp</h3>
+                    <p>Full-stack training in HTML, CSS, JavaScript, React, Node.js, and cloud deployment — build
+                        production-grade applications.</p>
+                    <a href="training.html" class="prog-link">View Details <svg width="14" height="14" fill="none"
+                            stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg></a>
+                </div>
+                <div class="prog-card fade-up">
+                    <div class="prog-icon">🎯</div>
+                    <h3>Corporate Skill Development</h3>
+                    <p>Leadership, communication, emotional intelligence, strategic management, and agile methodologies
+                        for enterprise teams.</p>
+                    <a href="training.html" class="prog-link">View Details <svg width="14" height="14" fill="none"
+                            stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg></a>
+                </div>
+                <div class="prog-card fade-up">
+                    <div class="prog-icon">🚀</div>
+                    <h3>Internship & Live Projects</h3>
+                    <p>Gain real-world experience with live industry projects, 1-on-1 mentorship, and pathways to
+                        meaningful careers.</p>
+                    <a href="training.html" class="prog-link">View Details <svg width="14" height="14" fill="none"
+                            stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg></a>
+                </div>
+                <div class="prog-card fade-up">
+                    <div class="prog-icon">☁️</div>
+                    <h3>DevOps & Cloud Training</h3>
+                    <p>CI/CD pipelines, containerization, Kubernetes, AWS/Azure/GCP, infrastructure automation, and site
+                        reliability engineering.</p>
+                    <a href="training.html" class="prog-link">View Details <svg width="14" height="14" fill="none"
+                            stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg></a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- ====== PROJECT SLIDER ====== -->
     <section class="section section--gray">
