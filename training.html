@@ -16,21 +16,21 @@
             text-align: center;
             background: linear-gradient(135deg, #0A1F44 0%, #122b5e 50%, #0e2450 100%);
             position: relative;
-            overflow: hidden
+            overflow: hidden;
         }
 
         .tp-hero::before {
             content: '';
             position: absolute;
             inset: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(201,162,39,0.05)" stroke-width="0.5"/></svg>') repeat;
-            background-size: 120px;
-            animation: drift 20s linear infinite
+            background: radial-gradient(circle at 20% 80%, rgba(201, 162, 39, .08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(201, 162, 39, .06) 0%, transparent 50%);
+            animation: heroPulse 6s ease-in-out infinite alternate;
         }
 
-        @keyframes drift {
+        @keyframes heroPulse {
             to {
-                background-position: 120px 120px
+                opacity: .5;
             }
         }
 
@@ -39,29 +39,32 @@
             font-size: 3.2rem;
             font-weight: 800;
             color: var(--white);
-            margin-bottom: 16px
+            margin-bottom: 16px;
+            position: relative;
         }
 
         .tp-hero h1 span {
-            color: var(--royal-gold)
+            color: var(--royal-gold);
         }
 
         .tp-hero p {
             color: rgba(255, 255, 255, .7);
             font-size: 1.15rem;
             max-width: 640px;
-            margin: 0 auto 32px
+            margin: 0 auto 32px;
+            position: relative;
         }
 
         .tp-hero .btn {
-            font-size: .95rem
+            font-size: .95rem;
+            position: relative;
         }
 
         /* ---- Program Cards ---- */
         .prog-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 28px
+            gap: 28px;
         }
 
         .prog-card {
@@ -76,7 +79,7 @@
 
         .prog-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 12px 40px rgba(10, 31, 68, .13)
+            box-shadow: 0 12px 40px rgba(10, 31, 68, .13);
         }
 
         .prog-card::before {
@@ -89,11 +92,11 @@
             background: linear-gradient(90deg, var(--royal-gold), var(--deep-blue));
             transform: scaleX(0);
             transform-origin: left;
-            transition: transform .4s var(--ease)
+            transition: transform .4s var(--ease);
         }
 
         .prog-card:hover::before {
-            transform: scaleX(1)
+            transform: scaleX(1);
         }
 
         .prog-icon {
@@ -110,21 +113,21 @@
         }
 
         .prog-card:hover .prog-icon {
-            background: rgba(201, 162, 39, .2)
+            background: rgba(201, 162, 39, .2);
         }
 
         .prog-card h3 {
             font-size: 1.15rem;
             font-weight: 700;
             color: var(--deep-blue);
-            margin-bottom: 10px
+            margin-bottom: 10px;
         }
 
         .prog-card p {
             font-size: .88rem;
             color: var(--mid-gray);
             line-height: 1.7;
-            margin-bottom: 20px
+            margin-bottom: 20px;
         }
 
         .prog-link {
@@ -134,11 +137,11 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            transition: gap .3s
+            transition: gap .3s;
         }
 
         .prog-link:hover {
-            gap: 10px
+            gap: 10px;
         }
 
         /* ---- Project Slider ---- */
@@ -219,11 +222,11 @@
         }
 
         .slider-prev {
-            left: 16px
+            left: 16px;
         }
 
         .slider-next {
-            right: 16px
+            right: 16px;
         }
 
         .slider-dots {
@@ -284,7 +287,7 @@
         }
 
         .collab-body {
-            padding: 24px 28px
+            padding: 24px 28px;
         }
 
         .collab-name {
@@ -317,91 +320,93 @@
             .slider-btn {
                 width: 42px;
                 height: 42px;
-                font-size: 1.15rem
+                font-size: 1.15rem;
             }
 
             .slider-overlay h3 {
-                font-size: 1.2rem
+                font-size: 1.2rem;
             }
 
             .collab-grid {
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             }
         }
 
         /* ---- Mobile ---- */
         @media(max-width:768px) {
             .tp-hero h1 {
-                font-size: 2.2rem
+                font-size: 2.2rem;
             }
 
             .slider-slide {
-                aspect-ratio: 4 / 3
+                aspect-ratio: 4 / 3;
             }
 
             .slider-btn {
                 width: 36px;
                 height: 36px;
-                font-size: 1rem
+                font-size: 1rem;
             }
 
             .slider-prev {
-                left: 10px
+                left: 10px;
             }
 
             .slider-next {
-                right: 10px
+                right: 10px;
             }
 
             .slider-overlay {
-                padding: 20px 20px
+                padding: 20px 20px;
             }
 
             .slider-overlay h3 {
-                font-size: 1.05rem
+                font-size: 1.05rem;
             }
 
             .slider-overlay p {
-                font-size: .8rem
+                font-size: .8rem;
             }
 
             .slider-dots {
                 gap: 8px;
-                margin-top: 14px
+                margin-top: 14px;
             }
 
             .slider-dot {
                 width: 8px;
-                height: 8px
+                height: 8px;
             }
 
             .collab-grid {
-                grid-template-columns: 1fr
+                grid-template-columns: 1fr;
             }
 
             .collab-img {
-                height: 200px
+                height: 200px;
             }
         }
 
         /* ---- Small Mobile ---- */
         @media(max-width:480px) {
             .slider-slide {
-                aspect-ratio: 3 / 2
+                aspect-ratio: 3 / 2;
             }
 
             .slider-overlay {
-                padding: 16px
+                padding: 16px;
             }
 
             .slider-overlay h3 {
-                font-size: .95rem
+                font-size: .95rem;
             }
         }
     </style>
 </head>
 
 <body>
+
+    <!-- ====== HEADER ====== -->
     <header class="header" id="header">
         <div class="container">
             <a href="index.html" class="header__logo"><img src="assets/img/logo.png" alt="Krishnayan Logo"></a>
@@ -419,7 +424,7 @@
         </div>
     </header>
 
-    <!-- ====== HERO ====== -->
+    <!-- ====== SECTION 1: HERO ====== -->
     <section class="tp-hero">
         <div class="container">
             <h1 class="fade-up">Training & <span>Industry Projects</span></h1>
@@ -429,8 +434,71 @@
         </div>
     </section>
 
+    <!-- ====== SECTION 2: TRAINING PROGRAMS ====== -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center" style="margin-bottom:50px">
+                <span class="section-label fade-up">What We Offer</span>
+                <h2 class="section-title fade-up">Our Training Programs</h2>
+                <p class="section-subtitle fade-up">Industry-aligned programs designed to make students and
+                    professionals job-ready with real-world skills.</p>
+            </div>
+            <div class="prog-grid">
+                <div class="prog-card fade-up">
+                    <div class="prog-icon">🤖</div>
+                    <h3>AI & Data Science Training</h3>
+                    <p>Deep dive into machine learning, deep learning, NLP, and data engineering with hands-on projects
+                        using real-world datasets.</p>
+                    <a href="#" class="prog-link">View Details <svg width="14" height="14" fill="none"
+                            stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg></a>
+                </div>
+                <div class="prog-card fade-up">
+                    <div class="prog-icon">💻</div>
+                    <h3>Web Development Bootcamp</h3>
+                    <p>Full-stack training in HTML, CSS, JavaScript, React, Node.js, and cloud deployment — build
+                        production-grade applications.</p>
+                    <a href="#" class="prog-link">View Details <svg width="14" height="14" fill="none"
+                            stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg></a>
+                </div>
+                <div class="prog-card fade-up">
+                    <div class="prog-icon">🎯</div>
+                    <h3>Corporate Skill Development</h3>
+                    <p>Leadership, communication, emotional intelligence, strategic management, and agile methodologies
+                        for enterprise teams.</p>
+                    <a href="#" class="prog-link">View Details <svg width="14" height="14" fill="none"
+                            stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg></a>
+                </div>
+                <div class="prog-card fade-up">
+                    <div class="prog-icon">🚀</div>
+                    <h3>Internship & Live Projects</h3>
+                    <p>Gain real-world experience with live industry projects, 1-on-1 mentorship, and pathways to
+                        meaningful careers.</p>
+                    <a href="#" class="prog-link">View Details <svg width="14" height="14" fill="none"
+                            stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg></a>
+                </div>
+                <div class="prog-card fade-up">
+                    <div class="prog-icon">☁️</div>
+                    <h3>DevOps & Cloud Training</h3>
+                    <p>CI/CD pipelines, containerization, Kubernetes, AWS/Azure/GCP, infrastructure automation, and site
+                        reliability engineering.</p>
+                    <a href="#" class="prog-link">View Details <svg width="14" height="14" fill="none"
+                            stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg></a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- ====== PROJECT SLIDER ====== -->
+    <!-- ====== SECTION 3: PAST TRAINING PROJECTS (IMAGE SLIDER) ====== -->
     <section class="section section--gray">
         <div class="container">
             <div class="text-center" style="margin-bottom:50px">
@@ -443,21 +511,21 @@
                 <button class="slider-btn slider-prev" onclick="slideMove(-1)" aria-label="Previous">‹</button>
                 <div class="slider-track" id="sliderTrack">
                     <div class="slider-slide">
-                        <img src="assets/training/PSIT%20Kanpur.jpg" alt="PSIT Kanpur" loading="lazy">
+                        <img src="assets/training/PSIT_Kanpur.jpg" alt="PSIT Kanpur" loading="lazy">
                         <div class="slider-overlay">
                             <h3>PSIT Kanpur</h3>
                             <p>Industry-oriented technical training for engineering students</p>
                         </div>
                     </div>
                     <div class="slider-slide">
-                        <img src="assets/training/GNIOT%20Greater%20Noida.JPG" alt="GNIOT Greater Noida" loading="lazy">
+                        <img src="assets/training/GNIOT_Greater_Noida.JPG" alt="GNIOT Greater Noida" loading="lazy">
                         <div class="slider-overlay">
                             <h3>GNIOT Greater Noida</h3>
                             <p>AI & Data Science workshop for final year students</p>
                         </div>
                     </div>
                     <div class="slider-slide">
-                        <img src="assets/training/Amity%20University%20Noida.jpeg" alt="Amity University Noida"
+                        <img src="assets/training/Amity_University_Noida.jpeg" alt="Amity University Noida"
                             loading="lazy">
                         <div class="slider-overlay">
                             <h3>Amity University Noida</h3>
@@ -465,14 +533,14 @@
                         </div>
                     </div>
                     <div class="slider-slide">
-                        <img src="assets/training/KIT%20Kanpur.jpg" alt="KIT Kanpur" loading="lazy">
+                        <img src="assets/training/KIT_Kanpur.jpg" alt="KIT Kanpur" loading="lazy">
                         <div class="slider-overlay">
                             <h3>KIT Kanpur</h3>
                             <p>Full-stack web development bootcamp</p>
                         </div>
                     </div>
                     <div class="slider-slide">
-                        <img src="assets/training/ITM%20University%20Gwalior.jpg" alt="ITM University Gwalior"
+                        <img src="assets/training/ITM_University_Gwalior.jpg" alt="ITM University Gwalior"
                             loading="lazy">
                         <div class="slider-overlay">
                             <h3>ITM University Gwalior</h3>
@@ -480,39 +548,81 @@
                         </div>
                     </div>
                     <div class="slider-slide">
-                        <img src="assets/training/VIT%20Vellor.jpeg" alt="VIT Vellore" loading="lazy">
+                        <img src="assets/training/VIT_Vellor.jpeg" alt="VIT Vellore" loading="lazy">
                         <div class="slider-overlay">
                             <h3>VIT Vellore</h3>
                             <p>AI-driven solutions and machine learning workshop</p>
                         </div>
                     </div>
                     <div class="slider-slide">
-                        <img src="assets/training/GGI%20Ludhiyana.jpg" alt="GGI Ludhiana" loading="lazy">
+                        <img src="assets/training/GGI_Ludhiyana.jpg" alt="GGI Ludhiana" loading="lazy">
                         <div class="slider-overlay">
                             <h3>GGI Ludhiana</h3>
                             <p>Hands-on coding bootcamp and placement readiness</p>
                         </div>
                     </div>
                     <div class="slider-slide">
-                        <img src="assets/training/KGI%20Kanpur.jpg" alt="KGI Kanpur" loading="lazy">
+                        <img src="assets/training/KGI_Kanpur.jpg" alt="KGI Kanpur" loading="lazy">
                         <div class="slider-overlay">
                             <h3>KGI Kanpur</h3>
                             <p>Industry-oriented software engineering training</p>
                         </div>
                     </div>
                     <div class="slider-slide">
-                        <img src="assets/training/Gov%20Polytechnic%20Amithe.jpg" alt="Gov Polytechnic Amethi"
+                        <img src="assets/training/Gov_Polytechnic_Amithe.jpg" alt="Gov Polytechnic Amethi"
                             loading="lazy">
                         <div class="slider-overlay">
-                            <h3>Gov Polytechnic Amethi</h3>
+                            <h3>Gov. Polytechnic Amethi</h3>
                             <p>Technical skill development for polytechnic students</p>
                         </div>
                     </div>
                     <div class="slider-slide">
-                        <img src="assets/training/PSIT%20Kanpur_2.jpg" alt="PSIT Kanpur Workshop" loading="lazy">
+                        <img src="assets/training/PSIT_Kanpur_2.jpg" alt="PSIT Kanpur Workshop" loading="lazy">
                         <div class="slider-overlay">
                             <h3>PSIT Kanpur — Workshop</h3>
                             <p>Advanced Python & data analytics workshop</p>
+                        </div>
+                    </div>
+                    <div class="slider-slide">
+                        <img src="assets/training/Tamil%20Nadu_1.jpeg" alt="Tamil Nadu Training" loading="lazy">
+                        <div class="slider-overlay">
+                            <h3>Tamil Nadu Institutions</h3>
+                            <p>Multi-campus training drive across Tamil Nadu</p>
+                        </div>
+                    </div>
+                    <div class="slider-slide">
+                        <img src="assets/training/Tamil%20Nadu_2.jpeg" alt="Tamil Nadu Training" loading="lazy">
+                        <div class="slider-overlay">
+                            <h3>Tamil Nadu — Session 2</h3>
+                            <p>Emerging technologies and career development training</p>
+                        </div>
+                    </div>
+                    <div class="slider-slide">
+                        <img src="assets/training/Tamil%20Nadu_3.jpeg" alt="Tamil Nadu Training" loading="lazy">
+                        <div class="slider-overlay">
+                            <h3>Tamil Nadu — Session 3</h3>
+                            <p>Industry-ready skill development workshop</p>
+                        </div>
+                    </div>
+                    <div class="slider-slide">
+                        <img src="assets/training/GGI_Ludhiyana_2.jpg" alt="GGI Ludhiana" loading="lazy">
+                        <div class="slider-overlay">
+                            <h3>GGI Ludhiana — Session 2</h3>
+                            <p>Advanced coding and project-based learning</p>
+                        </div>
+                    </div>
+                    <div class="slider-slide">
+                        <img src="assets/training/GGI_Ludhiyana_3.jpg" alt="GGI Ludhiana" loading="lazy">
+                        <div class="slider-overlay">
+                            <h3>GGI Ludhiana — Session 3</h3>
+                            <p>Career readiness and soft skills program</p>
+                        </div>
+                    </div>
+                    <div class="slider-slide">
+                        <img src="assets/training/Gov_Polytechnic_4.jpeg" alt="Gov Polytechnic" loading="lazy">
+                        <div class="slider-overlay">
+                            <h3>Gov. Polytechnic — Workshop</h3>
+                            <p>Programming fundamentals and practical training</p>
                         </div>
                     </div>
                 </div>
@@ -522,7 +632,7 @@
         </div>
     </section>
 
-    <!-- ====== COLLEGE COLLABORATIONS ====== -->
+    <!-- ====== SECTION 4: COLLEGE COLLABORATIONS ====== -->
     <section class="section">
         <div class="container">
             <div class="text-center" style="margin-bottom:50px">
@@ -533,7 +643,7 @@
             </div>
             <div class="collab-grid">
                 <div class="collab-card fade-up">
-                    <img class="collab-img" src="assets/training/PSIT%20Kanpur.jpg" alt="PSIT Kanpur" loading="lazy">
+                    <img class="collab-img" src="assets/training/PSIT_Kanpur.jpg" alt="PSIT Kanpur" loading="lazy">
                     <div class="collab-body">
                         <div class="collab-name">PSIT Kanpur</div>
                         <p class="collab-desc">Multi-day technical training covering AI, web development, and soft
@@ -542,7 +652,7 @@
                     </div>
                 </div>
                 <div class="collab-card fade-up">
-                    <img class="collab-img" src="assets/training/GNIOT%20Greater%20Noida.JPG" alt="GNIOT Greater Noida"
+                    <img class="collab-img" src="assets/training/GNIOT_Greater_Noida.JPG" alt="GNIOT Greater Noida"
                         loading="lazy">
                     <div class="collab-body">
                         <div class="collab-name">GNIOT Greater Noida</div>
@@ -552,7 +662,7 @@
                     </div>
                 </div>
                 <div class="collab-card fade-up">
-                    <img class="collab-img" src="assets/training/Amity%20University%20Noida.jpeg" alt="Amity University"
+                    <img class="collab-img" src="assets/training/Amity_University_Noida.jpeg" alt="Amity University"
                         loading="lazy">
                     <div class="collab-body">
                         <div class="collab-name">Amity University Noida</div>
@@ -562,7 +672,7 @@
                     </div>
                 </div>
                 <div class="collab-card fade-up">
-                    <img class="collab-img" src="assets/training/KIT%20Kanpur.jpg" alt="KIT Kanpur" loading="lazy">
+                    <img class="collab-img" src="assets/training/KIT_Kanpur.jpg" alt="KIT Kanpur" loading="lazy">
                     <div class="collab-body">
                         <div class="collab-name">KIT Kanpur</div>
                         <p class="collab-desc">Full-stack web development and modern JavaScript frameworks training for
@@ -571,7 +681,7 @@
                     </div>
                 </div>
                 <div class="collab-card fade-up">
-                    <img class="collab-img" src="assets/training/VIT%20Vellor.jpeg" alt="VIT Vellore" loading="lazy">
+                    <img class="collab-img" src="assets/training/VIT_Vellor.jpeg" alt="VIT Vellore" loading="lazy">
                     <div class="collab-body">
                         <div class="collab-name">VIT Vellore</div>
                         <p class="collab-desc">AI & machine learning workshop series with live project development and
@@ -580,7 +690,7 @@
                     </div>
                 </div>
                 <div class="collab-card fade-up">
-                    <img class="collab-img" src="assets/training/ITM%20University%20Gwalior.jpg"
+                    <img class="collab-img" src="assets/training/ITM_University_Gwalior.jpg"
                         alt="ITM University Gwalior" loading="lazy">
                     <div class="collab-body">
                         <div class="collab-name">ITM University Gwalior</div>
@@ -590,7 +700,7 @@
                     </div>
                 </div>
                 <div class="collab-card fade-up">
-                    <img class="collab-img" src="assets/training/GGI%20Ludhiyana_3.jpg" alt="GGI Ludhiana" loading="lazy">
+                    <img class="collab-img" src="assets/training/GGI_Ludhiyana_3.jpg" alt="GGI Ludhiana" loading="lazy">
                     <div class="collab-body">
                         <div class="collab-name">GGI Ludhiana</div>
                         <p class="collab-desc">Hands-on coding bootcamp and career readiness program for engineering
@@ -599,7 +709,7 @@
                     </div>
                 </div>
                 <div class="collab-card fade-up">
-                    <img class="collab-img" src="assets/training/KGI%20Kanpur.jpg" alt="KGI Kanpur" loading="lazy">
+                    <img class="collab-img" src="assets/training/KGI_Kanpur.jpg" alt="KGI Kanpur" loading="lazy">
                     <div class="collab-body">
                         <div class="collab-name">KGI Kanpur</div>
                         <p class="collab-desc">Software engineering and industry-oriented technical training with
@@ -608,7 +718,7 @@
                     </div>
                 </div>
                 <div class="collab-card fade-up">
-                    <img class="collab-img" src="assets/training/Gov%20Polytechnic%20Amithe.jpg"
+                    <img class="collab-img" src="assets/training/Gov_Polytechnic_Amithe.jpg"
                         alt="Gov Polytechnic Amethi" loading="lazy">
                     <div class="collab-body">
                         <div class="collab-name">Gov. Polytechnic Amethi</div>
@@ -631,7 +741,7 @@
         </div>
     </section>
 
-    <!-- ====== CTA ====== -->
+    <!-- ====== SECTION 5: CTA ====== -->
     <section class="cta-banner">
         <div class="container fade-up">
             <h2 class="cta-banner__title">Partner With Us for Industry-Ready Training</h2>
@@ -641,6 +751,7 @@
         </div>
     </section>
 
+    <!-- ====== FOOTER ====== -->
     <footer class="footer">
         <div class="container">
             <div class="footer__grid">
@@ -715,24 +826,57 @@
             <div class="footer__bottom">&copy; 2026 Krishnayan Leadership Training. All rights reserved.</div>
         </div>
     </footer>
+
+    <!-- ====== SCRIPTS ====== -->
     <script>
         // Header & Nav
         const hamburger = document.getElementById('hamburger'), nav = document.getElementById('nav');
         hamburger.addEventListener('click', () => { hamburger.classList.toggle('open'); nav.classList.toggle('open') });
         nav.querySelectorAll('a').forEach(l => l.addEventListener('click', () => { hamburger.classList.remove('open'); nav.classList.remove('open') }));
         window.addEventListener('scroll', () => document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50));
+
+        // Scroll-triggered fade-in
         const observer = new IntersectionObserver(e => e.forEach(el => { if (el.isIntersecting) { el.target.classList.add('visible'); observer.unobserve(el.target) } }), { threshold: .15 });
         document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-        // Slider
+        // Image Slider
         const track = document.getElementById('sliderTrack');
         const slides = track.querySelectorAll('.slider-slide');
         const dotsBox = document.getElementById('sliderDots');
         let cur = 0, timer;
-        slides.forEach((_, i) => { const d = document.createElement('button'); d.className = 'slider-dot' + (i === 0 ? ' active' : ''); d.onclick = () => goTo(i); dotsBox.appendChild(d) });
-        function goTo(i) { cur = (i + slides.length) % slides.length; track.style.transform = 'translateX(-' + cur * 100 + '%)'; dotsBox.querySelectorAll('.slider-dot').forEach((d, j) => d.classList.toggle('active', j === cur)); resetTimer() }
-        function slideMove(d) { goTo(cur + d) }
-        function resetTimer() { clearInterval(timer); timer = setInterval(() => goTo(cur + 1), 3500) }
+
+        // Create dots
+        slides.forEach((_, i) => {
+            const d = document.createElement('button');
+            d.className = 'slider-dot' + (i === 0 ? ' active' : '');
+            d.setAttribute('aria-label', 'Slide ' + (i + 1));
+            d.onclick = () => goTo(i);
+            dotsBox.appendChild(d);
+        });
+
+        function goTo(i) {
+            cur = (i + slides.length) % slides.length;
+            track.style.transform = 'translateX(-' + cur * 100 + '%)';
+            dotsBox.querySelectorAll('.slider-dot').forEach((d, j) => d.classList.toggle('active', j === cur));
+            resetTimer();
+        }
+
+        function slideMove(d) { goTo(cur + d); }
+
+        function resetTimer() {
+            clearInterval(timer);
+            timer = setInterval(() => goTo(cur + 1), 3500);
+        }
+
+        // Touch/Swipe support for mobile
+        let touchStartX = 0, touchEndX = 0;
+        track.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+        track.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            if (touchStartX - touchEndX > 50) slideMove(1);
+            else if (touchEndX - touchStartX > 50) slideMove(-1);
+        });
+
         resetTimer();
     </script>
 </body>
