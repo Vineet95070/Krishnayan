@@ -157,6 +157,49 @@
                 columns: 1
             }
         }
+
+        .gallery-item.gallery-hidden {
+            display: none;
+        }
+
+        .gallery-grid.expanded .gallery-item.gallery-hidden {
+            display: block;
+        }
+
+        .see-more-wrap {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .see-more-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 36px;
+            border-radius: 50px;
+            background: linear-gradient(135deg, var(--royal-gold), #d4af37);
+            color: var(--deep-blue);
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: .95rem;
+            border: none;
+            cursor: pointer;
+            transition: all .3s var(--ease);
+            box-shadow: 0 4px 20px rgba(201, 162, 39, .25);
+        }
+
+        .see-more-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(201, 162, 39, .35);
+        }
+
+        .see-more-btn svg {
+            transition: transform .3s;
+        }
+
+        .see-more-btn.expanded svg {
+            transform: rotate(180deg);
+        }
     </style>
 </head>
 
@@ -191,101 +234,90 @@
                     and the vibrant community we've built together.</p>
             </div>
             <div class="gallery-grid fade-up" id="galleryGrid">
-                <div class="gallery-item" onclick="openLB(0)"><img src="assets/gallary/IMG_20241112_113159.jpg"
-                        alt="Training Session" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(1)"><img src="assets/gallary/IMG_20241112_113223.jpg"
-                        alt="Workshop" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(2)"><img src="assets/gallary/IMG_20241112_113257.jpg"
-                        alt="Team Activity" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(3)"><img src="assets/gallary/IMG_20241111_130718.jpg"
-                        alt="Corporate Event" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(4)"><img src="assets/gallary/DSC_0169.JPG"
+                <!-- First 5 visible -->
+                <div class="gallery-item" onclick="openLB(0)"><img src="assets/gallary/VIT.jpeg"
+                        alt="VIT Vellore Training" loading="lazy"></div>
+                <div class="gallery-item" onclick="openLB(1)"><img src="assets/training/PSIT_Kanpur.jpg"
+                        alt="PSIT Kanpur Training" loading="lazy"></div>
+                <div class="gallery-item" onclick="openLB(2)"><img src="assets/training/Tamil%20Nadu_1.jpeg"
+                        alt="Tamil Nadu Training" loading="lazy"></div>
+                <div class="gallery-item" onclick="openLB(3)"><img src="assets/gallary/DSC_0169.JPG"
                         alt="Leadership Program" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(5)"><img src="assets/gallary/IMG_20240828_165939.jpg"
-                        alt="Training Workshop" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(6)"><img src="assets/gallary/IMG_20240828_170018.jpg"
-                        alt="Team Building" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(7)"><img src="assets/gallary/IMG_20250417_123826289.jpg"
-                        alt="Campus Program" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(8)"><img src="assets/gallary/IMG_20250417_123827313.jpg"
-                        alt="Student Training" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(9)"><img src="assets/gallary/IMG_20250418_123620477.jpg"
-                        alt="Workshop Session" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(10)"><img src="assets/gallary/IMG_20250418_123621618.jpg"
-                        alt="Training Event" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(11)"><img src="assets/gallary/IMG_2027.jpg"
-                        alt="Corporate Training" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(12)"><img src="assets/gallary/IMG_2028.jpg"
-                        alt="Leadership Workshop" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(13)"><img src="assets/gallary/IMG_3309.jpg" alt="Team Event"
+                <div class="gallery-item" onclick="openLB(4)"><img src="assets/gallary/IMG_3309.jpg" alt="Team Event"
                         loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(14)"><img src="assets/gallary/IMG_20240913_000012.jpg"
-                        alt="Evening Session" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(15)"><img src="assets/gallary/IMG_20240930_124235.jpg"
-                        alt="Group Activity" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(16)"><img src="assets/gallary/20241001_111323.jpg"
-                        alt="Office Event" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(17)"><img src="assets/gallary/20241001_111342.jpg"
-                        alt="Corporate Meeting" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(18)"><img src="assets/gallary/20241202_131900.jpg"
-                        alt="Year-End Event" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(19)"><img src="assets/gallary/IMG-20241114-WA0007.jpg"
-                        alt="Workshop Highlights" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(20)"><img src="assets/gallary/IMG-20251106-WA0026.jpg"
-                        alt="Training Moment" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(21)"><img src="assets/gallary/IMG-20251123-WA0016.jpg"
-                        alt="Event Highlight" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(22)"><img src="assets/gallary/IMG-20251123-WA0020.jpg"
-                        alt="Team Photo" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(23)"><img src="assets/gallary/IMG-20251123-WA0023.jpg"
-                        alt="Group Photo" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(24)"><img src="assets/gallary/IMG-20251123-WA0038.jpg"
-                        alt="Training Day" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(25)"><img src="assets/gallary/1733039625162.jfif"
-                        alt="Company Event" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(26)"><img src="assets/gallary/IMG-20250929-WA0025.jpg"
-                        alt="Certificate Ceremony" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(27)"><img src="assets/gallary/IMG-20250929-WA0026.jpg"
-                        alt="Award Ceremony" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(28)"><img
+                <!-- Hidden — revealed on See More -->
+                <div class="gallery-item gallery-hidden" onclick="openLB(5)"><img
+                        src="assets/training/PSIT_Kanpur_2.jpg" alt="PSIT Kanpur Workshop" loading="lazy"></div>
+                <div class="gallery-item gallery-hidden" onclick="openLB(6)"><img
+                        src="assets/training/Tamil%20Nadu_2.jpeg" alt="Tamil Nadu Session 2" loading="lazy"></div>
+                <div class="gallery-item gallery-hidden" onclick="openLB(7)"><img
+                        src="assets/training/Tamil%20Nadu_3.jpeg" alt="Tamil Nadu Session 3" loading="lazy"></div>
+                <div class="gallery-item gallery-hidden" onclick="openLB(8)"><img
+                        src="assets/gallary/IMG_20241112_113257.jpg" alt="Team Activity" loading="lazy"></div>
+                <div class="gallery-item gallery-hidden" onclick="openLB(9)"><img
+                        src="assets/gallary/IMG_20240828_170018.jpg" alt="Team Building" loading="lazy"></div>
+                <div class="gallery-item gallery-hidden" onclick="openLB(10)"><img
+                        src="assets/gallary/IMG_20250417_123826289.jpg" alt="Campus Program" loading="lazy"></div>
+                <div class="gallery-item gallery-hidden" onclick="openLB(11)"><img
+                        src="assets/gallary/IMG_20250417_123827313.jpg" alt="Student Training" loading="lazy"></div>
+                <div class="gallery-item gallery-hidden" onclick="openLB(12)"><img
+                        src="assets/gallary/IMG_20250418_123620477.jpg" alt="Workshop Session" loading="lazy"></div>
+                <div class="gallery-item gallery-hidden" onclick="openLB(13)"><img
+                        src="assets/gallary/IMG_20250418_123621618.jpg" alt="Training Event" loading="lazy"></div>
+                <div class="gallery-item gallery-hidden" onclick="openLB(14)"><img src="assets/gallary/IMG_2027.jpg"
+                        alt="Corporate Training" loading="lazy"></div>
+                <div class="gallery-item gallery-hidden" onclick="openLB(15)"><img src="assets/gallary/IMG_2028.jpg"
+                        alt="Leadership Workshop" loading="lazy"></div>
+                <div class="gallery-item gallery-hidden" onclick="openLB(16)"><img
+                        src="assets/gallary/IMG_20240913_000012.jpg" alt="Evening Session" loading="lazy"></div>
+                <div class="gallery-item gallery-hidden" onclick="openLB(17)"><img
+                        src="assets/gallary/IMG_20240930_124235.jpg" alt="Group Activity" loading="lazy"></div>
+                <div class="gallery-item gallery-hidden" onclick="openLB(18)"><img
+                        src="assets/gallary/20241202_131900.jpg" alt="Year-End Event" loading="lazy"></div>
+                <div class="gallery-item gallery-hidden" onclick="openLB(19)"><img
+                        src="assets/gallary/IMG-20241114-WA0007.jpg" alt="Workshop Highlights" loading="lazy"></div>
+                <div class="gallery-item gallery-hidden" onclick="openLB(20)"><img
+                        src="assets/gallary/IMG-20251106-WA0026.jpg" alt="Training Moment" loading="lazy"></div>
+                <div class="gallery-item gallery-hidden" onclick="openLB(21)"><img
+                        src="assets/gallary/IMG-20251123-WA0016.jpg" alt="Event Highlight" loading="lazy"></div>
+                <div class="gallery-item gallery-hidden" onclick="openLB(22)"><img
+                        src="assets/gallary/IMG-20251123-WA0020.jpg" alt="Team Photo" loading="lazy"></div>
+                <div class="gallery-item gallery-hidden" onclick="openLB(23)"><img
+                        src="assets/gallary/IMG-20251123-WA0023.jpg" alt="Group Photo" loading="lazy"></div>
+                <div class="gallery-item gallery-hidden" onclick="openLB(24)"><img
+                        src="assets/gallary/IMG-20251123-WA0038.jpg" alt="Training Day" loading="lazy"></div>
+                <div class="gallery-item gallery-hidden" onclick="openLB(25)"><img
+                        src="assets/gallary/1733039625162.jfif" alt="Company Event" loading="lazy"></div>
+                <div class="gallery-item gallery-hidden" onclick="openLB(26)"><img
                         src="assets/gallary/Screenshot%202024-09-20%20021024.png" alt="Digital Highlight"
-                        loading="lazy">
-                </div>
-                <div class="gallery-item" onclick="openLB(29)"><img
+                        loading="lazy"></div>
+                <div class="gallery-item gallery-hidden" onclick="openLB(27)"><img
                         src="assets/gallary/WhatsApp%20Image%202025-09-13%20at%2012.35.27.jpeg" alt="Team Moment"
                         loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(30)"><img
+                <div class="gallery-item gallery-hidden" onclick="openLB(28)"><img
                         src="assets/gallary/WhatsApp%20Image%202026-02-07%20at%2021.08.30%20(1).jpeg"
                         alt="Workshop Photo" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(31)"><img
+                <div class="gallery-item gallery-hidden" onclick="openLB(29)"><img
                         src="assets/gallary/WhatsApp%20Image%202026-02-07%20at%2021.08.30.jpeg" alt="Corporate Session"
                         loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(32)"><img
+                <div class="gallery-item gallery-hidden" onclick="openLB(30)"><img
                         src="assets/gallary/WhatsApp%20Image%202026-02-07%20at%2021.08.31.jpeg" alt="Training Highlight"
                         loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(33)"><img
-                        src="assets/gallary/WhatsApp%20Image%202026-02-07%20at%2021.08.34.jpeg" alt="Campus Visit"
-                        loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(34)"><img
-                        src="assets/gallary/WhatsApp%20Image%202026-02-07%20at%2021.08.38%20(1).jpeg"
-                        alt="Student Group" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(35)"><img
-                        src="assets/gallary/WhatsApp%20Image%202026-02-07%20at%2021.08.38.jpeg" alt="Program Event"
-                        loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(36)"><img
-                        src="assets/gallary/WhatsApp%20Image%202026-02-07%20at%2021.08.39.jpeg" alt="Seminar"
-                        loading="lazy">
-                </div>
-                <div class="gallery-item" onclick="openLB(37)"><img
-                        src="assets/gallary/WhatsApp%20Image%202026-02-07%20at%2021.08.40.jpeg" alt="Conference"
-                        loading="lazy">
-                </div>
-                <div class="gallery-item" onclick="openLB(38)"><img
+                <div class="gallery-item gallery-hidden" onclick="openLB(31)"><img
                         src="assets/gallary/WhatsApp%20Image%202026-02-11%20at%2015.07.49%20(1).jpeg"
                         alt="Team Building Event" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(39)"><img
+                <div class="gallery-item gallery-hidden" onclick="openLB(32)"><img
                         src="assets/gallary/WhatsApp%20Image%202026-02-11%20at%2015.07.49.jpeg"
                         alt="Training Completion" loading="lazy"></div>
+            </div>
+            <div class="see-more-wrap fade-up">
+                <button class="see-more-btn" id="seeMoreBtn" onclick="toggleGallery()">
+                    See More
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"
+                        viewBox="0 0 24 24">
+                        <path d="M6 9l6 6 6-6" />
+                    </svg>
+                </button>
             </div>
         </div>
     </section>
@@ -397,6 +429,14 @@
         function navLB(d) { cur = (cur + d + imgs.length) % imgs.length; updLB() }
         function updLB() { document.getElementById('lbImg').src = imgs[cur]; document.getElementById('lbCounter').textContent = (cur + 1) + ' / ' + imgs.length }
         document.addEventListener('keydown', e => { if (!document.getElementById('lightbox').classList.contains('active')) return; if (e.key === 'Escape') closeLB(); if (e.key === 'ArrowRight') navLB(1); if (e.key === 'ArrowLeft') navLB(-1) });
+        // See More toggle
+        function toggleGallery() {
+            const grid = document.getElementById('galleryGrid');
+            const btn = document.getElementById('seeMoreBtn');
+            const isExpanded = grid.classList.toggle('expanded');
+            btn.classList.toggle('expanded', isExpanded);
+            btn.childNodes[0].textContent = isExpanded ? 'Show Less ' : 'See More ';
+        }
     </script>
 </body>
 
