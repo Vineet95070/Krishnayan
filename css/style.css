@@ -659,7 +659,8 @@ textarea {
   background: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(5px);
   z-index: 9999;
-  display: flex;
+  display: none;
+  /* Forced override for live servers */
   align-items: center;
   justify-content: center;
   opacity: 0;
@@ -668,6 +669,8 @@ textarea {
 }
 
 .modal.show {
+  display: flex !important;
+  z-index: 1000 !important;
   opacity: 1;
   visibility: visible;
 }
