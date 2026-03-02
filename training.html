@@ -8,7 +8,7 @@
     <meta name="description"
         content="Explore Krishnayan's training programs, past college training projects, and industry collaborations across India.">
     <link rel="icon" href="assets/img/icon.png">
-    <link rel="stylesheet" href="css/style.css?v=2.2">
+    <link rel="stylesheet" href="css/style.css?v=2.3">
     <style>
         /* ---- Hero ---- */
         .tp-hero {
@@ -414,9 +414,20 @@
                 aria-label="Toggle navigation"><span></span><span></span><span></span></button>
             <nav class="header__nav" id="nav">
                 <a href="index.html">Home</a>
-                <a href="about.html">About</a>
+                <div class="dropdown" id="aboutDropdown">
+                    <a href="#" class="dropdown-trigger" class="dropdown-trigger active">About <svg width="14"
+                            height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M6 9l6 6 6-6" />
+                        </svg></a>
+                    <div class="dropdown-menu">
+                        <a href="about.html">About Us</a>
+                        <a href="training.html" class="active">Training</a>
+                        <a href="collaboration.html">Collaboration</a>
+                        <a href="docs.html">Docs</a>
+                        <a href="tutorials.html">Tutorials</a>
+                    </div>
+                </div>
                 <a href="team.html">Team</a>
-                <a href="training.html" class="active">Training</a>
                 <a href="gallery.html">Gallery</a>
                 <a href="contact.html">Contact</a>
                 <a href="getstarted.html" class="header__cta">Get Started</a>
@@ -584,26 +595,27 @@
                         </div>
                     </div>
                     <div class="slider-slide">
-                        <img src="assets/training/Tamil%20Nadu_1.jpeg" alt="Tamil Nadu Training" loading="lazy">
+                        <img src="assets/training/smit_tamil_nadu_1.jpeg" alt="SMIT College Chennai" loading="lazy">
                         <div class="slider-overlay">
-                            <h3>Tamil Nadu Institutions</h3>
-                            <p>Multi-campus training drive across Tamil Nadu</p>
+                            <h3>SMIT College Chennai</h3>
+                            <p>Comprehensive placement readiness and tech training drive</p>
                         </div>
                     </div>
                     <div class="slider-slide">
-                        <img src="assets/training/Tamil%20Nadu_2.jpeg" alt="Tamil Nadu Training" loading="lazy">
+                        <img src="assets/training/smit_tamil_nadu.jpeg" alt="SMIT College Program" loading="lazy">
                         <div class="slider-overlay">
-                            <h3>Tamil Nadu — Session 2</h3>
+                            <h3>SMIT College Chennai — Campus</h3>
+                            <p>Interactive student workshops and career guidance</p>
+                        </div>
+                    </div>
+                    <div class="slider-slide">
+                        <img src="assets/training/smit_tamil_nadu_2.jpeg" alt="SMIT College Chennai" loading="lazy">
+                        <div class="slider-overlay">
+                            <h3>SMIT College Chennai — Session 2</h3>
                             <p>Emerging technologies and career development training</p>
                         </div>
                     </div>
-                    <div class="slider-slide">
-                        <img src="assets/training/Tamil%20Nadu_3.jpeg" alt="Tamil Nadu Training" loading="lazy">
-                        <div class="slider-overlay">
-                            <h3>Tamil Nadu — Session 3</h3>
-                            <p>Industry-ready skill development workshop</p>
-                        </div>
-                    </div>
+
                     <div class="slider-slide">
                         <img src="assets/training/GGI_Ludhiyana_2.jpg" alt="GGI Ludhiana" loading="lazy">
                         <div class="slider-overlay">
@@ -616,6 +628,20 @@
                         <div class="slider-overlay">
                             <h3>GGI Ludhiana — Session 3</h3>
                             <p>Career readiness and soft skills program</p>
+                        </div>
+                    </div>
+                    <div class="slider-slide">
+                        <img src="assets/training/lpu_1.jpeg" alt="Lovely Professional University" loading="lazy">
+                        <div class="slider-overlay">
+                            <h3>LPU Punjab</h3>
+                            <p>Advanced placement readiness and coding bootcamp</p>
+                        </div>
+                    </div>
+                    <div class="slider-slide">
+                        <img src="assets/training/lpu_2.jpeg" alt="LPU Workshop" loading="lazy">
+                        <div class="slider-overlay">
+                            <h3>LPU — Practical Workshop</h3>
+                            <p>Hands-on project building and soft skills training</p>
                         </div>
                     </div>
                     <div class="slider-slide">
@@ -690,6 +716,16 @@
                     </div>
                 </div>
                 <div class="collab-card fade-up">
+                    <img class="collab-img" src="assets/training/smit_tamil_nadu_2.jpeg" alt="SMIT College Chennai"
+                        loading="lazy">
+                    <div class="collab-body">
+                        <div class="collab-name">SMIT College Chennai</div>
+                        <p class="collab-desc">Placement readiness workshop and comprehensive engineering skill
+                            enhancement program.</p>
+                        <span class="collab-tag">In collaboration with College Authorities</span>
+                    </div>
+                </div>
+                <div class="collab-card fade-up">
                     <img class="collab-img" src="assets/training/ITM_University_Gwalior.jpg"
                         alt="ITM University Gwalior" loading="lazy">
                     <div class="collab-body">
@@ -705,6 +741,15 @@
                         <div class="collab-name">GGI Ludhiana</div>
                         <p class="collab-desc">Hands-on coding bootcamp and career readiness program for engineering
                             students.</p>
+                        <span class="collab-tag">In collaboration with College Authorities</span>
+                    </div>
+                </div>
+                <div class="collab-card fade-up">
+                    <img class="collab-img" src="assets/training/lpu_1.jpeg" alt="LPU Punjab" loading="lazy">
+                    <div class="collab-body">
+                        <div class="collab-name">LPU Punjab</div>
+                        <p class="collab-desc">Comprehensive placement readiness, coding bootcamp, and practical soft
+                            skills training.</p>
                         <span class="collab-tag">In collaboration with College Authorities</span>
                     </div>
                 </div>
@@ -728,7 +773,7 @@
                     </div>
                 </div>
                 <div class="collab-card fade-up">
-                    <img class="collab-img" src="assets/training/Tamil%20Nadu_1.jpeg" alt="Tamil Nadu Training"
+                    <img class="collab-img" src="assets/training/smit_tamil_nadu_1.jpeg" alt="Tamil Nadu Training"
                         loading="lazy">
                     <div class="collab-body">
                         <div class="collab-name">Tamil Nadu Institutions</div>

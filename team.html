@@ -8,13 +8,13 @@
     <meta name="description"
         content="Meet the visionary founders and expert mentors behind Krishnayan AI — leaders from Google, Amazon, IIT, and top corporate training institutions.">
     <link rel="icon" href="assets/img/icon.png">
-    <link rel="stylesheet" href="css/style.css?v=2.2">
+    <link rel="stylesheet" href="css/style.css?v=2.3">
     <style>
         /* ---- Leadership Cards ---- */
         .leader-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 48px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
             align-items: start
         }
 
@@ -269,9 +269,20 @@
                 aria-label="Toggle navigation"><span></span><span></span><span></span></button>
             <nav class="header__nav" id="nav">
                 <a href="index.html">Home</a>
-                <a href="about.html">About</a>
+                <div class="dropdown" id="aboutDropdown">
+                    <a href="#" class="dropdown-trigger">About <svg width="14" height="14" fill="none"
+                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M6 9l6 6 6-6" />
+                        </svg></a>
+                    <div class="dropdown-menu">
+                        <a href="about.html">About Us</a>
+                        <a href="training.html">Training</a>
+                        <a href="collaboration.html">Collaboration</a>
+                        <a href="docs.html">Docs</a>
+                        <a href="tutorials.html">Tutorials</a>
+                    </div>
+                </div>
                 <a href="team.html" class="active">Team</a>
-                <a href="training.html">Training</a>
                 <a href="gallery.html">Gallery</a>
                 <a href="contact.html">Contact</a>
                 <a href="getstarted.html" class="header__cta">Get Started</a>
@@ -294,7 +305,12 @@
         <div class="container">
             <div class="text-center" style="margin-bottom:56px">
                 <span class="section-label fade-up">The Visionaries</span>
-                <h2 class="section-title fade-up">Meet Our Founders</h2>
+                <h2 class="section-title fade-up"
+                    style="font-size: 3.5rem; line-height: 1.15; font-family: var(--font-heading); margin-bottom: 22px;">
+                    <span
+                        style="background: linear-gradient(135deg, #FFD700, #FFA500); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.4));">Consciousness</span><br>meets
+                    Intelligence
+                </h2>
                 <p class="section-subtitle fade-up">Driven by a shared passion for technology and education, our
                     founders combine world-class expertise with a mission to create lasting impact.</p>
             </div>
@@ -303,14 +319,14 @@
                 <!-- RAJAT GARG -->
                 <div class="leader-card fade-up">
                     <div class="leader-header">
-                        <img class="leader-photo" src="assets/Team/Rajat%20Garg.jpg" alt="Rajat Garg">
+                        <img class="leader-photo" src="assets/team/Rajat%20Garg.jpg" alt="Rajat Garg">
                     </div>
                     <div class="leader-body">
                         <h3 class="leader-name">Rajat Garg</h3>
-                        <span class="leader-role">Founder</span>
+                        <span class="leader-role">Co-Founder</span>
                         <p class="leader-bio">A visionary technology leader with deep roots in academia and industry.
                             With professional experience at <strong>Google</strong>, <strong>Amazon</strong>, and
-                            <strong>Wimwears</strong>, Rajat brings unparalleled expertise in scalable systems,
+                            <strong>VMWare</strong>, Rajat brings unparalleled expertise in scalable systems,
                             AI-driven solutions, and enterprise technology — driving Krishnayan's mission of global
                             technology excellence.
                         </p>
@@ -329,7 +345,7 @@
                                     <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
                                     <path d="M6 12v5c0 0 3 3 6 3s6-3 6-3v-5" />
                                 </svg>
-                                B.Tech ECE — IIT Roorkee (CGPA 7.545)
+                                B.Tech ECE — IIT Roorkee
                             </li>
                             <li>
                                 <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
@@ -337,7 +353,7 @@
                                     <rect x="2" y="7" width="20" height="14" rx="2" />
                                     <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
                                 </svg>
-                                Google · Amazon · Wimwears
+                                Google · Amazon · VMWare
                             </li>
                             <li>
                                 <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
@@ -367,11 +383,11 @@
                 <!-- VINEET BHARDWAJ -->
                 <div class="leader-card fade-up">
                     <div class="leader-header">
-                        <img class="leader-photo" src="assets/Team/Vineet%20Bhardwaj.jpg" alt="Vineet Bhardwaj">
+                        <img class="leader-photo" src="assets/team/Vineet%20Bhardwaj.jpg" alt="Vineet Bhardwaj">
                     </div>
                     <div class="leader-body">
                         <h3 class="leader-name">Vineet Bhardwaj</h3>
-                        <span class="leader-role">Founder</span>
+                        <span class="leader-role">Co-Founder</span>
                         <p class="leader-bio">A passionate educator and technologist dedicated to bridging the gap
                             between academia and industry. With extensive experience at <strong>E&ICT Academy, IIT
                                 Kanpur</strong> and over <strong>5 years in corporate training</strong>, Vineet
@@ -427,6 +443,55 @@
                                     <polyline points="22,6 12,13 2,6" />
                                 </svg></a>
                         </div>
+                    </div>
+                </div>
+
+                <!-- RAVI SRIVASTAVA -->
+                <div class="leader-card fade-up">
+                    <div class="leader-header">
+                        <img class="leader-photo" src="assets/team/ravi_srivastava.png" alt="Ravi Srivastava">
+                    </div>
+                    <div class="leader-body">
+                        <h3 class="leader-name">Ravi Srivastava</h3>
+                        <span class="leader-role">EXECUTIVE HEAD – TRAININGS</span>
+                        <p class="leader-bio">Ravi Srivastava brings 30+ years of expertise in capability development,
+                            process excellence, and corporate training across academic and industry ecosystems. At
+                            Krishnayan AI, he leads structured, process-driven training frameworks that ensure
+                            industry-ready performance and measurable skill outcomes.</p>
+                        <ul class="leader-highlights">
+                            <li>
+                                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                                </svg>
+                                30+ Years in Capability Dev & Corporate Training
+                            </li>
+                            <li>
+                                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                </svg>
+                                Process Excellence (NIIT Ltd, Almoayed Group)
+                            </li>
+                            <li>
+                                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                                </svg>
+                                Industry Alignment with Accenture, Infosys, Wipro
+                            </li>
+                            <li>
+                                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <rect x="4" y="4" width="16" height="16" rx="2" />
+                                    <path d="M9 9h6M9 13h6M9 17h4" />
+                                </svg>
+                                ITSM, DevOps & Service Operations Training
+                            </li>
+                        </ul>
                     </div>
                 </div>
 

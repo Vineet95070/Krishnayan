@@ -8,7 +8,7 @@
     <meta name="description"
         content="Explore the Krishnayan AI gallery — moments from our training sessions, workshops, events, and corporate programs.">
     <link rel="icon" href="assets/img/icon.png">
-    <link rel="stylesheet" href="css/style.css?v=2.2">
+    <link rel="stylesheet" href="css/style.css?v=2.3">
     <style>
         .gallery-grid {
             columns: 4;
@@ -210,9 +210,23 @@
             <button class="hamburger" id="hamburger"
                 aria-label="Toggle navigation"><span></span><span></span><span></span></button>
             <nav class="header__nav" id="nav">
-                <a href="index.html">Home</a><a href="about.html">About</a><a href="team.html">Team</a>
-                <a href="training.html">Training</a><a href="gallery.html" class="active">Gallery</a><a
-                    href="contact.html">Contact</a>
+                <a href="index.html">Home</a>
+                <div class="dropdown" id="aboutDropdown">
+                    <a href="#" class="dropdown-trigger">About <svg width="14" height="14" fill="none"
+                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M6 9l6 6 6-6" />
+                        </svg></a>
+                    <div class="dropdown-menu">
+                        <a href="about.html">About Us</a>
+                        <a href="training.html">Training</a>
+                        <a href="collaboration.html">Collaboration</a>
+                        <a href="docs.html">Docs</a>
+                        <a href="tutorials.html">Tutorials</a>
+                    </div>
+                </div>
+                <a href="team.html">Team</a>
+                <a href="gallery.html" class="active">Gallery</a>
+                <a href="contact.html">Contact</a>
                 <a href="getstarted.html" class="header__cta">Get Started</a>
             </nav>
         </div>
@@ -235,80 +249,64 @@
             </div>
             <div class="gallery-grid fade-up" id="galleryGrid">
                 <!-- First 5 visible -->
-                <div class="gallery-item" onclick="openLB(0)"><img src="assets/gallary/VIT.jpeg"
-                        alt="VIT Vellore Training" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(1)"><img src="assets/training/PSIT_Kanpur.jpg"
-                        alt="PSIT Kanpur Training" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(2)"><img src="assets/training/Tamil%20Nadu_1.jpeg"
-                        alt="Tamil Nadu Training" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(3)"><img src="assets/gallary/DSC_0169.JPG"
-                        alt="Leadership Program" loading="lazy"></div>
-                <div class="gallery-item" onclick="openLB(4)"><img src="assets/gallary/IMG_3309.jpg" alt="Team Event"
+                <div class="gallery-item" onclick="openLB(0)"><img src="assets/gallary/vit_1.jpeg" alt="VIT Vellore"
                         loading="lazy"></div>
+                <div class="gallery-item" onclick="openLB(1)"><img src="assets/gallary/vit_2.jpeg"
+                        alt="VIT Vellore Training" loading="lazy"></div>
+                <div class="gallery-item" onclick="openLB(2)"><img src="assets/gallary/vit_3.jpeg"
+                        alt="VIT Vellore Group" loading="lazy"></div>
+                <div class="gallery-item" onclick="openLB(3)"><img src="assets/training/smit_tamil_nadu_1.jpeg"
+                        alt="SMIT College Chennai" loading="lazy"></div>
+                <div class="gallery-item" onclick="openLB(4)"><img src="assets/training/smit_tamil_nadu_2.jpeg"
+                        alt="SMIT College Chennai Session" loading="lazy"></div>
                 <!-- Hidden — revealed on See More -->
                 <div class="gallery-item gallery-hidden" onclick="openLB(5)"><img
-                        src="assets/training/PSIT_Kanpur_2.jpg" alt="PSIT Kanpur Workshop" loading="lazy"></div>
-                <div class="gallery-item gallery-hidden" onclick="openLB(6)"><img
-                        src="assets/training/Tamil%20Nadu_2.jpeg" alt="Tamil Nadu Session 2" loading="lazy"></div>
+                        src="assets/training/smit_tamil_nadu.jpeg" alt="SMIT Training" loading="lazy"></div>
+                <div class="gallery-item gallery-hidden" onclick="openLB(6)"><img src="assets/training/PSIT_Kanpur.jpg"
+                        alt="PSIT Kanpur" loading="lazy"></div>
                 <div class="gallery-item gallery-hidden" onclick="openLB(7)"><img
-                        src="assets/training/Tamil%20Nadu_3.jpeg" alt="Tamil Nadu Session 3" loading="lazy"></div>
-                <div class="gallery-item gallery-hidden" onclick="openLB(8)"><img
-                        src="assets/gallary/IMG_20241112_113257.jpg" alt="Team Activity" loading="lazy"></div>
-                <div class="gallery-item gallery-hidden" onclick="openLB(9)"><img
-                        src="assets/gallary/IMG_20240828_170018.jpg" alt="Team Building" loading="lazy"></div>
-                <div class="gallery-item gallery-hidden" onclick="openLB(10)"><img
-                        src="assets/gallary/IMG_20250417_123826289.jpg" alt="Campus Program" loading="lazy"></div>
-                <div class="gallery-item gallery-hidden" onclick="openLB(11)"><img
-                        src="assets/gallary/IMG_20250417_123827313.jpg" alt="Student Training" loading="lazy"></div>
-                <div class="gallery-item gallery-hidden" onclick="openLB(12)"><img
-                        src="assets/gallary/IMG_20250418_123620477.jpg" alt="Workshop Session" loading="lazy"></div>
-                <div class="gallery-item gallery-hidden" onclick="openLB(13)"><img
-                        src="assets/gallary/IMG_20250418_123621618.jpg" alt="Training Event" loading="lazy"></div>
-                <div class="gallery-item gallery-hidden" onclick="openLB(14)"><img src="assets/gallary/IMG_2027.jpg"
+                        src="assets/training/PSIT_Kanpur_2.jpg" alt="PSIT Kanpur Workshop" loading="lazy"></div>
+                <div class="gallery-item gallery-hidden" onclick="openLB(8)"><img src="assets/gallary/DSC_0169.JPG"
+                        alt="Corporate Session" loading="lazy"></div>
+                <div class="gallery-item gallery-hidden" onclick="openLB(9)"><img src="assets/gallary/IMG_2028.jpg"
                         alt="Corporate Training" loading="lazy"></div>
-                <div class="gallery-item gallery-hidden" onclick="openLB(15)"><img src="assets/gallary/IMG_2028.jpg"
-                        alt="Leadership Workshop" loading="lazy"></div>
-                <div class="gallery-item gallery-hidden" onclick="openLB(16)"><img
-                        src="assets/gallary/IMG_20240913_000012.jpg" alt="Evening Session" loading="lazy"></div>
+                <div class="gallery-item gallery-hidden" onclick="openLB(10)"><img src="assets/gallary/gniot.jpg"
+                        alt="GNIOT Greater Noida" loading="lazy"></div>
+                <div class="gallery-item gallery-hidden" onclick="openLB(11)"><img src="assets/gallary/ggi_2.jpg"
+                        alt="GGI Ludhiana" loading="lazy"></div>
+                <div class="gallery-item gallery-hidden" onclick="openLB(12)"><img src="assets/gallary/kit_2.jpg"
+                        alt="KIT Kanpur" loading="lazy"></div>
+                <div class="gallery-item gallery-hidden" onclick="openLB(13)"><img src="assets/gallary/lpu_1.jpeg"
+                        alt="LPU Training" loading="lazy"></div>
+                <div class="gallery-item gallery-hidden" onclick="openLB(14)"><img src="assets/gallary/lpu_2.jpeg"
+                        alt="LPU Workshop" loading="lazy"></div>
+                <div class="gallery-item gallery-hidden" onclick="openLB(15)"><img src="assets/gallary/mits_jammu.jpg"
+                        alt="MITS Jammu" loading="lazy"></div>
+                <div class="gallery-item gallery-hidden" onclick="openLB(16)"><img src="assets/gallary/vrindavan.jpeg"
+                        alt="Vrindavan Session" loading="lazy"></div>
                 <div class="gallery-item gallery-hidden" onclick="openLB(17)"><img
-                        src="assets/gallary/IMG_20240930_124235.jpg" alt="Group Activity" loading="lazy"></div>
+                        src="assets/gallary/girls_polytechnic_amithe.jpeg" alt="Girls Polytechnic Amethi"
+                        loading="lazy"></div>
                 <div class="gallery-item gallery-hidden" onclick="openLB(18)"><img
-                        src="assets/gallary/20241202_131900.jpg" alt="Year-End Event" loading="lazy"></div>
+                        src="assets/gallary/girls_polytechnic_amithe_2.jpg" alt="Girls Polytechnic Project"
+                        loading="lazy"></div>
                 <div class="gallery-item gallery-hidden" onclick="openLB(19)"><img
-                        src="assets/gallary/IMG-20241114-WA0007.jpg" alt="Workshop Highlights" loading="lazy"></div>
+                        src="assets/gallary/IMG-20241114-WA0007.jpg" alt="Training Group" loading="lazy"></div>
                 <div class="gallery-item gallery-hidden" onclick="openLB(20)"><img
-                        src="assets/gallary/IMG-20251106-WA0026.jpg" alt="Training Moment" loading="lazy"></div>
+                        src="assets/gallary/IMG-20251106-WA0026.jpg" alt="Event Highlights" loading="lazy"></div>
                 <div class="gallery-item gallery-hidden" onclick="openLB(21)"><img
-                        src="assets/gallary/IMG-20251123-WA0016.jpg" alt="Event Highlight" loading="lazy"></div>
+                        src="assets/gallary/IMG_20240913_000012.jpg" alt="Evening Workshop" loading="lazy"></div>
                 <div class="gallery-item gallery-hidden" onclick="openLB(22)"><img
-                        src="assets/gallary/IMG-20251123-WA0020.jpg" alt="Team Photo" loading="lazy"></div>
+                        src="assets/gallary/IMG_20241112_113257.jpg" alt="Student Interaction" loading="lazy"></div>
                 <div class="gallery-item gallery-hidden" onclick="openLB(23)"><img
-                        src="assets/gallary/IMG-20251123-WA0023.jpg" alt="Group Photo" loading="lazy"></div>
+                        src="assets/gallary/IMG_20250417_123826289.jpg" alt="Campus Training" loading="lazy"></div>
                 <div class="gallery-item gallery-hidden" onclick="openLB(24)"><img
-                        src="assets/gallary/IMG-20251123-WA0038.jpg" alt="Training Day" loading="lazy"></div>
+                        src="assets/gallary/IMG_20250417_123827313.jpg" alt="Team Building" loading="lazy"></div>
                 <div class="gallery-item gallery-hidden" onclick="openLB(25)"><img
-                        src="assets/gallary/1733039625162.jfif" alt="Company Event" loading="lazy"></div>
+                        src="assets/gallary/Screenshot%202024-09-20%20021024.png" alt="Digital Classroom"
+                        loading="lazy"></div>
                 <div class="gallery-item gallery-hidden" onclick="openLB(26)"><img
-                        src="assets/gallary/Screenshot%202024-09-20%20021024.png" alt="Digital Highlight"
-                        loading="lazy"></div>
-                <div class="gallery-item gallery-hidden" onclick="openLB(27)"><img
-                        src="assets/gallary/WhatsApp%20Image%202025-09-13%20at%2012.35.27.jpeg" alt="Team Moment"
-                        loading="lazy"></div>
-                <div class="gallery-item gallery-hidden" onclick="openLB(28)"><img
-                        src="assets/gallary/WhatsApp%20Image%202026-02-07%20at%2021.08.30%20(1).jpeg"
-                        alt="Workshop Photo" loading="lazy"></div>
-                <div class="gallery-item gallery-hidden" onclick="openLB(29)"><img
-                        src="assets/gallary/WhatsApp%20Image%202026-02-07%20at%2021.08.30.jpeg" alt="Corporate Session"
-                        loading="lazy"></div>
-                <div class="gallery-item gallery-hidden" onclick="openLB(30)"><img
-                        src="assets/gallary/WhatsApp%20Image%202026-02-07%20at%2021.08.31.jpeg" alt="Training Highlight"
-                        loading="lazy"></div>
-                <div class="gallery-item gallery-hidden" onclick="openLB(31)"><img
-                        src="assets/gallary/WhatsApp%20Image%202026-02-11%20at%2015.07.49%20(1).jpeg"
-                        alt="Team Building Event" loading="lazy"></div>
-                <div class="gallery-item gallery-hidden" onclick="openLB(32)"><img
-                        src="assets/gallary/WhatsApp%20Image%202026-02-11%20at%2015.07.49.jpeg"
-                        alt="Training Completion" loading="lazy"></div>
+                        src="assets/gallary/1733039625162.jfif" alt="Company Memory" loading="lazy"></div>
             </div>
             <div class="see-more-wrap fade-up">
                 <button class="see-more-btn" id="seeMoreBtn" onclick="toggleGallery()">
